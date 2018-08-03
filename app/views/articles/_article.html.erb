@@ -20,6 +20,9 @@
                         data: { confirm: "Are you sure you want to delete the article?"},
                         class: "btn btn-xs btn-danger" %>
                 </div>
+                <% if article.categories.any? %>
+                    <p> Categories: <%= render article.categories %></p>
+                <% end %>
                 <% end %>
             </div>
         </div>
